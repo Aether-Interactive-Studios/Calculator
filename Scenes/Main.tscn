@@ -1,0 +1,246 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Art/Roboto/Roboto-Light.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/buttonsequalsname.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0823529, 0.0666667, 0.0666667, 1 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+Button/styles/normal = SubResource( 3 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 720.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Display" type="LineEdit" parent="."]
+margin_left = 40.0
+margin_top = 103.0
+margin_right = 676.0
+margin_bottom = 216.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Numbers" type="Control" parent="Buttons"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="0" type="Button" parent="Buttons/Numbers"]
+margin_left = 40.0
+margin_top = 621.0
+margin_right = 243.0
+margin_bottom = 702.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Button" parent="Buttons/Numbers"]
+margin_left = 40.0
+margin_top = 513.0
+margin_right = 199.0
+margin_bottom = 621.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Button" parent="Buttons/Numbers"]
+margin_left = 199.0
+margin_top = 513.0
+margin_right = 358.0
+margin_bottom = 621.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Button" parent="Buttons/Numbers"]
+margin_left = 358.0
+margin_top = 513.0
+margin_right = 517.0
+margin_bottom = 621.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Button" parent="Buttons/Numbers"]
+margin_left = 40.0
+margin_top = 405.0
+margin_right = 199.0
+margin_bottom = 513.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="Button" parent="Buttons/Numbers"]
+margin_left = 199.0
+margin_top = 405.0
+margin_right = 358.0
+margin_bottom = 513.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="Button" parent="Buttons/Numbers"]
+margin_left = 358.0
+margin_top = 405.0
+margin_right = 517.0
+margin_bottom = 513.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="7" type="Button" parent="Buttons/Numbers"]
+margin_left = 40.0
+margin_top = 297.0
+margin_right = 199.0
+margin_bottom = 405.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="8" type="Button" parent="Buttons/Numbers"]
+margin_left = 199.0
+margin_top = 297.0
+margin_right = 358.0
+margin_bottom = 405.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="9" type="Button" parent="Buttons/Numbers"]
+margin_left = 358.0
+margin_top = 297.0
+margin_right = 517.0
+margin_bottom = 405.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="+" type="Button" parent="Buttons/Numbers"]
+margin_left = 517.0
+margin_top = 297.0
+margin_right = 683.0
+margin_bottom = 361.8
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="-" type="Button" parent="Buttons/Numbers"]
+margin_left = 517.0
+margin_top = 362.0
+margin_right = 683.0
+margin_bottom = 426.8
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Divide" type="Button" parent="Buttons/Numbers"]
+margin_left = 517.0
+margin_top = 427.0
+margin_right = 683.0
+margin_bottom = 491.8
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="*" type="Button" parent="Buttons/Numbers"]
+margin_left = 517.0
+margin_top = 492.0
+margin_right = 683.0
+margin_bottom = 556.8
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="=" type="Button" parent="Buttons/Numbers"]
+margin_left = 517.0
+margin_top = 557.0
+margin_right = 683.0
+margin_bottom = 621.8
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="my_signal" from="Buttons/Numbers/0" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/0" to="Buttons/Numbers/0" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/1" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/1" to="Buttons/Numbers/1" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/2" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/2" to="Buttons/Numbers/2" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/3" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/3" to="Buttons/Numbers/3" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/4" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/4" to="Buttons/Numbers/4" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/5" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/5" to="Buttons/Numbers/5" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/6" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/6" to="Buttons/Numbers/6" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/7" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/7" to="Buttons/Numbers/7" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/8" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/8" to="Buttons/Numbers/8" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/9" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/9" to="Buttons/Numbers/9" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/+" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/+" to="Buttons/Numbers/+" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/-" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/-" to="Buttons/Numbers/-" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/Divide" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/Divide" to="Buttons/Numbers/Divide" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/*" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/*" to="Buttons/Numbers/*" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/=" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/=" to="Buttons/Numbers/=" method="_on_pressed"]
