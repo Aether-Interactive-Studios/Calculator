@@ -20,15 +20,16 @@ Globals="*res://Scripts/Globals.gd"
 
 [display]
 
-window/size/width=1080
-window/size/height=1080
+window/size/width=720
+window/size/height=720
 window/handheld/orientation="sensor"
-window/stretch/mode="2d"
+window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
 [global]
 
 size=false
+display=false
 
 [physics]
 
