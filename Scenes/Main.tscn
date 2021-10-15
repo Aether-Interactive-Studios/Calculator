@@ -1,23 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Art/Roboto/Roboto-Light.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Art/Main.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/buttonsequalsname.gd" type="Script" id=3]
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.0823529, 0.0666667, 0.0666667, 1 )
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
-
-[sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
-Button/styles/normal = SubResource( 3 )
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 2 )
+theme = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -44,6 +34,9 @@ __meta__ = {
 [node name="Buttons" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Numbers" type="Control" parent="Buttons"]
 margin_right = 40.0
@@ -55,7 +48,40 @@ __meta__ = {
 [node name="0" type="Button" parent="Buttons/Numbers"]
 margin_left = 40.0
 margin_top = 558.0
-margin_right = 243.0
+margin_right = 227.0
+margin_bottom = 639.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="•" type="Button" parent="Buttons/Numbers"]
+margin_left = 227.0
+margin_top = 558.0
+margin_right = 430.0
+margin_bottom = 639.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="(" type="Button" parent="Buttons/Numbers"]
+margin_left = 430.0
+margin_top = 558.0
+margin_right = 553.0
+margin_bottom = 639.0
+text = "1"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name=")" type="Button" parent="Buttons/Numbers"]
+margin_left = 553.0
+margin_top = 558.0
+margin_right = 683.0
 margin_bottom = 639.0
 text = "1"
 script = ExtResource( 3 )
@@ -184,7 +210,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Divide" type="Button" parent="Buttons/Numbers"]
+[node name="÷" type="Button" parent="Buttons/Numbers"]
 margin_left = 517.0
 margin_top = 364.0
 margin_right = 683.0
@@ -217,8 +243,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="History" type="Button" parent="Buttons"]
+margin_left = 457.0
+margin_top = 171.0
+margin_right = 629.0
+margin_bottom = 222.0
+text = "History"
+
 [connection signal="my_signal" from="Buttons/Numbers/0" to="." method="on_my_signal"]
 [connection signal="pressed" from="Buttons/Numbers/0" to="Buttons/Numbers/0" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/•" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/•" to="Buttons/Numbers/•" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/(" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/(" to="Buttons/Numbers/(" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/)" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/)" to="Buttons/Numbers/)" method="_on_pressed"]
 [connection signal="my_signal" from="Buttons/Numbers/1" to="." method="on_my_signal"]
 [connection signal="pressed" from="Buttons/Numbers/1" to="Buttons/Numbers/1" method="_on_pressed"]
 [connection signal="my_signal" from="Buttons/Numbers/2" to="." method="on_my_signal"]
@@ -241,9 +280,10 @@ __meta__ = {
 [connection signal="pressed" from="Buttons/Numbers/+" to="Buttons/Numbers/+" method="_on_pressed"]
 [connection signal="my_signal" from="Buttons/Numbers/-" to="." method="on_my_signal"]
 [connection signal="pressed" from="Buttons/Numbers/-" to="Buttons/Numbers/-" method="_on_pressed"]
-[connection signal="my_signal" from="Buttons/Numbers/Divide" to="." method="on_my_signal"]
-[connection signal="pressed" from="Buttons/Numbers/Divide" to="Buttons/Numbers/Divide" method="_on_pressed"]
+[connection signal="my_signal" from="Buttons/Numbers/÷" to="." method="on_my_signal"]
+[connection signal="pressed" from="Buttons/Numbers/÷" to="Buttons/Numbers/÷" method="_on_pressed"]
 [connection signal="my_signal" from="Buttons/Numbers/*" to="." method="on_my_signal"]
 [connection signal="pressed" from="Buttons/Numbers/*" to="Buttons/Numbers/*" method="_on_pressed"]
 [connection signal="my_signal" from="Buttons/Numbers/=" to="." method="on_my_signal"]
 [connection signal="pressed" from="Buttons/Numbers/=" to="Buttons/Numbers/=" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/History" to="." method="_on_History_pressed"]

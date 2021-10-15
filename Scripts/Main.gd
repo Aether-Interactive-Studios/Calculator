@@ -24,12 +24,19 @@ func my_signal(num):
 
 
 func on_my_signal(num):
-	if (Globals.state == 1 and num == "*") or (Globals.state == 1 and num == "+") or (Globals.state == 1 and num == "-"):
+	
+	
+	if num == "÷":
+		num = "/(1.0*"
+	if num == "•":
+		num = "."
+	if (Globals.state == 1 and num == "*") or (Globals.state == 1 and num == "+") or (Globals.state == 1 and num == "-") or (Globals.state == 1 and num =="÷"):
 		$Display.text += num
 		Globals.state = 0
 	else:
 			
 		if num == "=":
+			
 			var expression = Expression.new()
 			expression.parse($Display.text)
 			$Display.text = str(expression.execute())
@@ -38,6 +45,11 @@ func on_my_signal(num):
 			if Globals.state==1:
 				$Display.text = ""
 				Globals.state = 0
-			print(num)
+			#print(num)
 			$Display.text += num
+	pass # Replace with function body.
+
+
+func _on_History_pressed():
+	
 	pass # Replace with function body.
